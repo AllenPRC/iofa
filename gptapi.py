@@ -136,7 +136,7 @@ You are an AI assistant specializing in extracting and organizing key data from 
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -191,7 +191,7 @@ Ensure that the response is direct and follows the specified format without addi
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -203,12 +203,12 @@ Ensure that the response is direct and follows the specified format without addi
         answers = response.get('choices')[0].get('message').get('content')
         return answers   
 
-if __name__ == '__main__':
-    api_key = 'sk-syc0O7aRswVlTFJAQVaEJhGqI2TxLP2Tad64g2DNJuJpB0aX'
-    # r = use_gpt_4v("../1_table_page_7.jpg",api_key=api_key)
-    input_information = open('../pdfs/JACS/pdf/summary/1_article_SI_table.txt', 'r',encoding='utf-8').read()
-    r = use_gpt_4(api_key=api_key,input_information=input_information)
-    print(r)
+# if __name__ == '__main__':
+#     api_key = ''
+#     # r = use_gpt_4v("../1_table_page_7.jpg",api_key=api_key)
+#     input_information = open('../pdfs/JACS/pdf/summary/1_article_SI_table.txt', 'r',encoding='utf-8').read()
+#     r = use_gpt_4(api_key=api_key,input_information=input_information)
+#     print(r)
 
 
 def use_gpt_4_get_geometries(api_key,input_information):
@@ -249,7 +249,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -295,7 +295,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -308,7 +308,7 @@ OFET文献：
         return answers   
     
 if __name__ == '__main__':
-    api_key = 'sk-syc0O7aRswVlTFJAQVaEJhGqI2TxLP2Tad64g2DNJuJpB0aX'
+    api_key = ''
     # r = use_gpt_4v("../1_table_page_7.jpg",api_key=api_key)
     input_information = open('../pdfs/JACS/pdf/summary/1_article_SI_table.txt', 'r',encoding='utf-8').read()
     r = use_gpt_4(api_key=api_key,input_information=input_information)
