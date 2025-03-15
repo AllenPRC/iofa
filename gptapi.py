@@ -24,7 +24,7 @@ def use_gpt_4v(image_path,api_key):
     }
 
     payload = {
-        "model": "gpt-4-vision-preview",
+        "model": "gpt-4o",
         "messages": [
             {"role": "system", "content":f"""
 You are ChatGPT, a large language model trained by OpenAI.
@@ -79,7 +79,7 @@ def use_gpt_4(api_key,input_information):
         "Authorization": f"Bearer {api_key}"}
    
     payload = {
-        "model": "gpt-4-0125-preview",
+        "model": "gpt-4o",
         "messages": [
             {"role": "system", "content":f"""
 You are ChatGPT, a large language model trained by OpenAI.
@@ -136,7 +136,7 @@ You are an AI assistant specializing in extracting and organizing key data from 
         }
         ]}
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -155,7 +155,7 @@ def use_gpt_4_get_category(api_key,input_information):
         "Authorization": f"Bearer {api_key}"}
    
     payload = {
-        "model": "gpt-4-1106-preview",
+        "model": "gpt-4o",
         "messages": [
             {"role": "system", "content":f"""
 You are ChatGPT, a large language model trained by OpenAI.
@@ -191,7 +191,7 @@ Ensure that the response is direct and follows the specified format without addi
         }
         ]}
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -217,7 +217,7 @@ def use_gpt_4_get_geometries(api_key,input_information):
         "Authorization": f"Bearer {api_key}"}
    
     payload = {
-        "model": "gpt-4-1106-preview",
+        "model": "gpt-4o",
         "messages": [
             {"role": "system", "content":f"""
 You are ChatGPT, a large language model trained by OpenAI.
@@ -249,7 +249,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -268,7 +268,7 @@ def use_gpt_4_get_gate(api_key,input_information):
         "Authorization": f"Bearer {api_key}"}
    
     payload = {
-        "model": "gpt-4-1106-preview",
+        "model": "gpt-4o",
         "messages": [
             {"role": "system", "content":f"""
 You are ChatGPT, a large language model trained by OpenAI.
@@ -295,7 +295,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
