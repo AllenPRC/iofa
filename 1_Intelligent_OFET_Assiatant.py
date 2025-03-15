@@ -9,7 +9,7 @@ with st.sidebar:
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/YajingSun-Group/ofet_agent?quickstart=1)"
 
 st.title(" 🏠 LLM-Based AI Agent for Organic Semiconductor Devices Research")
-st.caption("🚀 Powered by advanced LLMs and machine learning algorithms")
+st.caption("🚀 Powered by advanced LLMs and machine learning algorithms, like ChatGPT")
 
     
 
