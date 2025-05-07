@@ -179,7 +179,7 @@ if st.button('Predict'):
                 atom_contributions[atom_idx] += contrib  # 累加贡献度到相关的原子
     # 可视化原子贡献度
     # fig, ax = plt.subplots(figsize=(6, 6))
-    fig, ax = plt.subplots(figsize=(6, 6))
+    # fig, ax = plt.subplots(figsize=(6, 6))
     SimilarityMaps.GetSimilarityMapFromWeights(mol, [float(x) for x in atom_contributions], colorMap='RdBu', 
                                             #    fig=fig,
                                                alpha=0.7
