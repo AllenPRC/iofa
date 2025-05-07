@@ -184,7 +184,8 @@ if st.button('Predict'):
                                             #    fig=fig,
                                                alpha=0.7
                                                )
-    st.pyplot(fig)
+    current_fig = plt.gcf()
+    st.pyplot(current_fig)
 
     st.write('##### 2. Device Features Importance:')
     shap.plots.force(cat_shap_values, features=input_features_df.iloc[:,167+2048:],matplotlib=True, show=False)
