@@ -194,8 +194,9 @@ if st.button('Predict'):
 
     st.write('##### 3. All Features Importance:')
     #shap.plots.bar(s_values[0], show=False)
-    fig, ax = plt.subplots(figsize=(10, 8))
-    shap.plots.bar(s_values[0], show=False, ax=ax)
+    plt.figure(figsize=(10, 8))
+    shap.plots.bar(s_values[0], show=False)
+    fig = plt.gcf()  # 获取当前图形
     st.pyplot(fig)
     # current_fig = plt.gcf()
     # st.pyplot(current_fig)
