@@ -136,7 +136,7 @@ You are an AI assistant specializing in extracting and organizing key data from 
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -191,7 +191,7 @@ Ensure that the response is direct and follows the specified format without addi
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -249,7 +249,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -295,7 +295,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
