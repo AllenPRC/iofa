@@ -142,7 +142,7 @@ if st.button('Predict'):
     # update_status(explainer.base_values)
     import shap
     import matplotlib.pyplot as plt
-    st.set_option('deprecation.showPyplotGlobalUse', False)
+    #st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 
