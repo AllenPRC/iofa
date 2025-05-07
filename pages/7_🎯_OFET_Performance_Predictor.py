@@ -194,8 +194,8 @@ if st.button('Predict'):
 
     st.write('##### 3. All Features Importance:')
     shap.plots.bar(s_values[0], show=False)
-    current_fig = plt.gcf()
-    st.pyplot(current_fig)
+    # current_fig = plt.gcf()
+    # st.pyplot(current_fig)
 
     # 现在，使用st.pyplot()时传入figure对象
 
