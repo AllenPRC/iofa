@@ -189,11 +189,13 @@ if st.button('Predict'):
 
     st.write('##### 2. Device Features Importance:')
     shap.plots.force(cat_shap_values, features=input_features_df.iloc[:,167+2048:],matplotlib=True, show=False)
-    st.pyplot()
+    current_fig = plt.gcf()
+    st.pyplot(current_fig)
 
     st.write('##### 3. All Features Importance:')
     shap.plots.bar(s_values[0], show=False)
-    st.pyplot()
+    current_fig = plt.gcf()
+    st.pyplot(current_fig)
 
     # 现在，使用st.pyplot()时传入figure对象
 
