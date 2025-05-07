@@ -57,7 +57,7 @@ Response format:
         ]}
     try:
         
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -66,7 +66,7 @@ Response format:
         print(response.text)
         print('sleep 60s.....')
         time.sleep(60)
-        response = requests.post("https://api.chatanywhere.com.cn/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
     else:
         response = response.json()
         answers = response.get('choices')[0].get('message').get('content')
