@@ -179,11 +179,12 @@ if st.button('Predict'):
                 atom_contributions[atom_idx] += contrib  # 累加贡献度到相关的原子
     # 可视化原子贡献度
     # fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(6, 6))
     SimilarityMaps.GetSimilarityMapFromWeights(mol, [float(x) for x in atom_contributions], colorMap='RdBu', 
                                             #    fig=fig,
                                                alpha=0.7
                                                )
-    st.pyplot()
+    st.pyplot(fig)
 
     st.write('##### 2. Device Features Importance:')
     shap.plots.force(cat_shap_values, features=input_features_df.iloc[:,167+2048:],matplotlib=True, show=False)
