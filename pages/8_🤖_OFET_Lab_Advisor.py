@@ -9,7 +9,7 @@ from http import HTTPStatus
 
 with st.sidebar:
     openai_api_key = st.text_input("LLM API Key", key="chatbot_api_key", type="password")
-    "[Get an API key](https://platform.openai.com/account/api-keys)"
+    "[Get an API key](https://bailian.console.aliyun.com/?tab=home#/home)"
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
     
@@ -24,7 +24,7 @@ with st.sidebar:
         st.session_state["preset_prompt"] = "Currently, l am using the DP-DTT as the semiconductor layer for OFET. Themobility of the OFETs obtained through the vacuum deposition method is0.42.l am looking to improve the mobility of this OFET. Please recommendother suitable fabrication methods."
 
 st.title("💬 OFET Lab Advisor")
-st.caption("🚀 A streamlit chatbot powered by DashScope LLM")
+st.caption("🚀 A streamlit chatbot powered by Qwen LLM")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
