@@ -57,7 +57,7 @@ Response format:
         ]}
     try:
         
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -66,7 +66,7 @@ Response format:
         print(response.text)
         print('sleep 60s.....')
         time.sleep(60)
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     else:
         response = response.json()
         answers = response.get('choices')[0].get('message').get('content')
@@ -136,7 +136,7 @@ You are an AI assistant specializing in extracting and organizing key data from 
         }
         ]}
     try:
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -191,7 +191,7 @@ Ensure that the response is direct and follows the specified format without addi
         }
         ]}
     try:
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -249,7 +249,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -295,7 +295,7 @@ OFET文献：
         }
         ]}
     try:
-        response = requests.post("https://ai98.vip/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.chatanywhere.tech/v1/chat/completions", headers=headers, json=payload)
     except:
         print("Error: API request failed, sleep 30s or longer, retrying...")
         time.sleep(30)
@@ -313,3 +313,4 @@ if __name__ == '__main__':
     input_information = open('../pdfs/JACS/pdf/summary/1_article_SI_table.txt', 'r',encoding='utf-8').read()
     r = use_gpt_4(api_key=api_key,input_information=input_information)
     print(r)
+
