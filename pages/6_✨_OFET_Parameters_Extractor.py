@@ -14,6 +14,7 @@ def update_status(message):
 
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+    st.info(openai_api_key)
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     with open('test.zip', 'rb') as f:
         st.download_button('Download test files', f, 'test.zip', 'application/zip')
@@ -120,3 +121,4 @@ if st.button('Extract'):
         # st.download_button(label="下载表格为CSV", data=csv, file_name="table.csv", mime='text/csv')
     else:
         st.error("Please upload a file first.")
+
